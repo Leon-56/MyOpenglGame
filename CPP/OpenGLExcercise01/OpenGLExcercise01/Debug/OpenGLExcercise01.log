@@ -1,4 +1,10 @@
-﻿  Camera.cpp
+﻿  main.cpp
+F:\OpenGL\CPP\OpenGLExcercise01\OpenGLExcercise01\main.cpp(109,11): warning C4244:  “=”: 从“double”转换到“float”，可能丢失数据
+F:\OpenGL\CPP\OpenGLExcercise01\OpenGLExcercise01\main.cpp(110,11): warning C4244:  “=”: 从“double”转换到“float”，可能丢失数据
+F:\OpenGL\CPP\OpenGLExcercise01\OpenGLExcercise01\main.cpp(115,16): warning C4244:  “=”: 从“double”转换到“float”，可能丢失数据
+F:\OpenGL\CPP\OpenGLExcercise01\OpenGLExcercise01\main.cpp(116,16): warning C4244:  “=”: 从“double”转换到“float”，可能丢失数据
+F:\OpenGL\CPP\OpenGLExcercise01\OpenGLExcercise01\main.cpp(118,10): warning C4244:  “=”: 从“double”转换到“float”，可能丢失数据
+F:\OpenGL\CPP\OpenGLExcercise01\OpenGLExcercise01\main.cpp(119,10): warning C4244:  “=”: 从“double”转换到“float”，可能丢失数据
 LINK : warning LNK4098: 默认库“MSVCRT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
 LINK : warning LNK4098: 默认库“LIBCMT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
 glew32s.lib(glew.obj) : warning LNK4099: 未找到 PDB“”(使用“glew32s.lib(glew.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样

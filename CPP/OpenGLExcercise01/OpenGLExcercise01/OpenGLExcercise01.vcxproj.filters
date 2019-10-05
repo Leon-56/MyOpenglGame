@@ -16,6 +16,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="fragmentSource.frag" />
+    <None Include="vertexSource.vert" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -38,10 +40,6 @@
     <ClInclude Include="Camera.h">
       <Filter>头文件</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="fragmentSource.txt" />
-    <Text Include="vertexSource.txt" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="container.jpg">
