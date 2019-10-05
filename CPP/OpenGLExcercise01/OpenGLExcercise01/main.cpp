@@ -12,6 +12,8 @@
 #include <gtc/matrix_transform.hpp>
 #include <gtc/type_ptr.hpp>
 
+#include "Camera.h"
+
 //float vertices[] = {
 //	0.5f,  0.5f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f,
 //	0.5f, -0.5f, 0.0f, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f,
@@ -68,10 +70,56 @@ unsigned int indices[] = {
 	2,3,0
 };
 
+glm::vec3 cubePositions[] = {
+  glm::vec3(0.0f,  0.0f,  0.0f),
+  glm::vec3(2.0f,  5.0f, -15.0f),
+  glm::vec3(-1.5f, -2.2f, -2.5f),
+  glm::vec3(-3.8f, -2.0f, -12.3f),
+  glm::vec3(2.4f, -0.4f, -3.5f),
+  glm::vec3(-1.7f,  3.0f, -7.5f),
+  glm::vec3(1.3f, -2.0f, -2.5f),
+  glm::vec3(1.5f,  2.0f, -2.5f),
+  glm::vec3(1.5f,  0.2f, -1.5f),
+  glm::vec3(-1.3f,  1.0f, -1.5f)
+};
+
+float lastX;
+float lastY;
+bool firstMouse = false;
+
+Camera camera(glm::vec3(0, 0, 3.0f), glm::radians(15.0f), glm::radians(180.0f), glm::vec3(0, 1.0f, 0));
+
 void processInput(GLFWwindow* window) {
 	if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
 		glfwSetWindowShouldClose(window, true);
 	}
+	if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS) {
+		camera.SpeedZ = 1.0f;
+	}
+	else if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS) {
+		camera.SpeedZ = -1.0f;
+	}
+	else {
+		camera.SpeedZ = 0;
+	}
+}
+
+void mouse_callback(GLFWwindow* window, double xPos, double yPos) {
+	if (firstMouse) {
+		lastX = xPos;
+		lastY = yPos;
+		firstMouse = false;
+	}
+
+	float deltaX, deltaY;
+	deltaX = xPos - lastX;
+	deltaY = yPos - lastY;
+	
+	lastX = xPos;
+	lastY = yPos;
+
+	camera.ProcessMouseMovement(deltaX, deltaY);
+
 }
 
 int main() {
@@ -90,6 +138,8 @@ int main() {
 		return -1;
 	}
 	glfwMakeContextCurrent(window);
+	glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+	glfwSetCursorPosCallback(window, mouse_callback);
 
 	// Init GLEW
 	glewExperimental = true;
@@ -163,6 +213,9 @@ int main() {
 		std::cout << "Load image failed." << std::endl;
 	}
 
+	//Instantiate Camera class
+	//Camera camera(glm::vec3(0, 0, 3.0f), glm::vec3(0, 0, 0), glm::vec3(0, 1.0f, 0));
+
 	glm::mat4 trans;
 	//trans = glm::translate(trans, glm::vec3(-1.0f, 0, 0));
 	//trans = glm::rotate(trans, glm::radians(90.0f), glm::vec3(0, 0, 1.0f));
@@ -170,7 +223,7 @@ int main() {
 	glm::mat4 modelMat;
 	modelMat = glm::rotate(modelMat, glm::radians(-55.0f), glm::vec3(1.0f, 0, 0));
 	glm::mat4 viewMat;
-	viewMat = glm::translate(viewMat, glm::vec3(0, 0, -3.0f));
+	
 	glm::mat4 projMat;
 	projMat = glm::perspective(glm::radians(45.0f), 800.0f / 600.0f, 0.1f, 100.0f);
 
@@ -191,22 +244,31 @@ int main() {
 		glBindTexture(GL_TEXTURE_2D, texture2);
 
 		glBindVertexArray(VAO);
-		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+		//glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
 
-		myShader->use();
-		glUniform1i(glGetUniformLocation(myShader->ID, "texture1"), 0);
-		glUniform1i(glGetUniformLocation(myShader->ID, "texture2"), 1);
-		//glUniformMatrix4fv(glGetUniformLocation(myShader->ID, "transform"), 1, GL_FALSE, glm::value_ptr(trans));
-		glUniformMatrix4fv(glGetUniformLocation(myShader->ID, "modelMat"), 1, GL_FALSE, glm::value_ptr(modelMat));
-		glUniformMatrix4fv(glGetUniformLocation(myShader->ID, "viewMat"), 1, GL_FALSE, glm::value_ptr(viewMat));
-		glUniformMatrix4fv(glGetUniformLocation(myShader->ID, "projMat"), 1, GL_FALSE, glm::value_ptr(projMat));
+		viewMat = camera.GetViewMatrix();
 
-		//glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
-		glDrawArrays(GL_TRIANGLES, 0, 36);
+		for (int i = 0; i < 10; i++) {
+			glm::mat4 modelMat2;
+			modelMat2 = glm::translate(modelMat2, cubePositions[i]);
+			myShader->use();
+			glUniform1i(glGetUniformLocation(myShader->ID, "texture1"), 0);
+			glUniform1i(glGetUniformLocation(myShader->ID, "texture2"), 1);
+			//glUniformMatrix4fv(glGetUniformLocation(myShader->ID, "transform"), 1, GL_FALSE, glm::value_ptr(trans));
+			glUniformMatrix4fv(glGetUniformLocation(myShader->ID, "modelMat"), 1, GL_FALSE, glm::value_ptr(modelMat2));
+			glUniformMatrix4fv(glGetUniformLocation(myShader->ID, "viewMat"), 1, GL_FALSE, glm::value_ptr(viewMat));
+			glUniformMatrix4fv(glGetUniformLocation(myShader->ID, "projMat"), 1, GL_FALSE, glm::value_ptr(projMat));
+
+			//glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+			glDrawArrays(GL_TRIANGLES, 0, 36);
+			glBindVertexArray(VAO);
+		}
+
 
 		// check and call events and swap the buffers
 		glfwSwapBuffers(window);
 		glfwPollEvents();
+		camera.UpdateCameraPos();
 	}
 	
 	glfwTerminate();
