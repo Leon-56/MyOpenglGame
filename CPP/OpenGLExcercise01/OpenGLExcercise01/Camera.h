@@ -19,6 +19,8 @@ public:
 	float Yaw;
 	float SenseX = 0.001f;
 	float SenseY = 0.001f;
+	float SpeedX = 0;
+	float SpeedY = 0;
 	float SpeedZ = 0;
 
 	glm::mat4 GetViewMatrix();

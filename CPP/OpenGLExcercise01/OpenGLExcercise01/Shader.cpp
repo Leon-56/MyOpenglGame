@@ -2,7 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
-#define GLEW_STATIC
+
 #include<GL/glew.h>
 #include<GLFW/glfw3.h>
 
@@ -66,6 +66,21 @@ Shader::Shader(const char* vertexPath, const char* fragmentPath) {
 
 void Shader::use() {
 	glUseProgram(ID);
+}
+
+void Shader::SetUniform3f(const char* paramNameString, glm::vec3 parma)
+{
+	glUniform3f(glGetUniformLocation(ID, paramNameString), parma.x, parma.y, parma.z);
+}
+
+void Shader::SetUniform1f(const char* paramNameString, float parma)
+{
+	glUniform1f(glGetUniformLocation(ID, paramNameString), parma);
+}
+
+void Shader::SetUniform1i(const char* paramNameString, int slot)
+{
+	glUniform1i(glGetUniformLocation(ID, paramNameString), slot);
 }
 
 void Shader::checkCompileErrors(unsigned int ID, std::string type) {
