@@ -1,8 +1,5 @@
 #include "LightSpot.h"
 
-#include <glm.hpp>
-#include <gtc/matrix_transform.hpp>
-#include <gtx/rotate_vector.hpp>
 
 LightSpot::LightSpot(glm::vec3 _position, glm::vec3 _angles, glm::vec3 _color) :
 	position(_position),
@@ -10,6 +7,9 @@ LightSpot::LightSpot(glm::vec3 _position, glm::vec3 _angles, glm::vec3 _color) :
 	color(_color)
 {
 	UpdateDirection();
+	constant = 1.0f;
+	linear = 0.09f;
+	quadratic = 0.032f;
 }
 
 LightSpot::~LightSpot()
