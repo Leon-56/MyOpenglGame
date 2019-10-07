@@ -2,6 +2,7 @@
 #define GLEW_STATIC
 #include<GL/glew.h>
 #include<GLFW/glfw3.h>
+#include <string>
 
 #include "Shader.h"
 #include "Material.h"
@@ -9,6 +10,7 @@
 #include "LightPoint.h"
 #include "LightSpot.h"
 #include "Mesh.h"
+#include "Model.h"
 
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
@@ -189,7 +191,9 @@ unsigned int LoadImageToGPU(const char* filename, GLint internalFormat, GLenum f
 	return TextBuffer;
 }
 
-int main() {
+int main(int argc, char* argv[]) {
+
+	std::string exePath = argv[0];
 
 	#pragma region Open a window
 		glfwInit();
@@ -239,7 +243,8 @@ int main() {
 	#pragma endregion
 
 	#pragma region Init and Load Models to VAO, VBO
-		Mesh cube(vertices);
+		//std::cout << exePath.substr(0, exePath.find_last_of('\\')) + "\\model\\nanosuit.obj" << std::endl;
+		Model model(exePath.substr(0, exePath.find_last_of('\\')) + "\\model\\nanosuit.obj");
 		//unsigned int VAO;
 		//glGenVertexArrays(1, &VAO);
 		//glBindVertexArray(VAO);
@@ -366,7 +371,7 @@ int main() {
 
 			// Drawcall
 			//glDrawArrays(GL_TRIANGLES, 0, 36);
-			cube.Draw(myMaterial->shader);
+			model.Draw(myMaterial->shader);
 		}
 
 

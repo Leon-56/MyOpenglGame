@@ -126,7 +126,7 @@ void main()
 	vec3 uNormal = normalize(Normal);
 	vec3 dirToCamera = normalize(cameraPos - FragPos);
 
-	//finalResult += CalcLightDirectional(lightD, uNormal, dirToCamera);
+	finalResult += CalcLightDirectional(lightD, uNormal, dirToCamera);
 
 	finalResult += CalcLightPoint(lightP0, uNormal, dirToCamera);
 	finalResult += CalcLightPoint(lightP1, uNormal, dirToCamera);

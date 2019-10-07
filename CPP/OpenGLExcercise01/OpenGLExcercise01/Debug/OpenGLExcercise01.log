@@ -1,2 +1,87 @@
 ﻿  Mesh.cpp
+  Model.cpp
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\quaternion.inl(207,15): warning C4244:  “=”: 从“double”转换到“TReal”，可能丢失数据
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\quaternion.inl(207,15): warning C4244:         with
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\quaternion.inl(207,15): warning C4244:         [
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\quaternion.inl(207,15): warning C4244:             TReal=float
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\quaternion.inl(207,15): warning C4244:         ]
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\quaternion.inl(186): message :  在编译 类 模板 成员函数“void aiQuaterniont<float>::Interpolate(aiQuaterniont<float> &,const aiQuaterniont<float> &,const aiQuaterniont<float> &,TReal)”时
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\quaternion.inl(186): message :         with
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\quaternion.inl(186): message :         [
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\quaternion.inl(186): message :             TReal=float
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\quaternion.inl(186): message :         ]
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\anim.h(435): message :  查看对正在编译的函数 模板 实例化“void aiQuaterniont<float>::Interpolate(aiQuaterniont<float> &,const aiQuaterniont<float> &,const aiQuaterniont<float> &,TReal)”的引用
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\anim.h(435): message :         with
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\anim.h(435): message :         [
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\anim.h(435): message :             TReal=float
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\anim.h(435): message :         ]
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\anim.h(107): message :  查看对正在编译的 类 模板 实例化“aiQuaterniont<float>”的引用
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\quaternion.inl(208,14): warning C4244:  “=”: 从“double”转换到“TReal”，可能丢失数据
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\quaternion.inl(208,14): warning C4244:         with
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\quaternion.inl(208,14): warning C4244:         [
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\quaternion.inl(208,14): warning C4244:             TReal=float
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\quaternion.inl(208,14): warning C4244:         ]
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\quaternion.inl(209,61): warning C4244:  “=”: 从“double”转换到“TReal”，可能丢失数据
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\quaternion.inl(209,61): warning C4244:         with
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\quaternion.inl(209,61): warning C4244:         [
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\quaternion.inl(209,61): warning C4244:             TReal=float
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\quaternion.inl(209,61): warning C4244:         ]
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\quaternion.inl(210,33): warning C4244:  “=”: 从“double”转换到“TReal”，可能丢失数据
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\quaternion.inl(210,33): warning C4244:         with
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\quaternion.inl(210,33): warning C4244:         [
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\quaternion.inl(210,33): warning C4244:             TReal=float
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\quaternion.inl(210,33): warning C4244:         ]
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\vector3.inl(93,13): warning C4244:  “return”: 从“double”转换到“TReal”，可能丢失数据
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\vector3.inl(93,13): warning C4244:         with
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\vector3.inl(93,13): warning C4244:         [
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\vector3.inl(93,13): warning C4244:             TReal=float
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\vector3.inl(93,13): warning C4244:         ]
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\vector3.inl(92): message :  在编译 类 模板 成员函数“TReal aiVector3t<TReal>::Length(void) const”时
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\vector3.inl(92): message :         with
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\vector3.inl(92): message :         [
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\vector3.inl(92): message :             TReal=float
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\vector3.inl(92): message :         ]
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\vector3.inl(98): message :  查看对正在编译的函数 模板 实例化“TReal aiVector3t<TReal>::Length(void) const”的引用
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\vector3.inl(98): message :         with
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\vector3.inl(98): message :         [
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\vector3.inl(98): message :             TReal=float
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\vector3.inl(98): message :         ]
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\vector3.inl(142): message :  在编译 类 模板 成员函数“bool aiVector3t<float>::operator ==(const aiVector3t<float> &) const”时
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\anim.h(82): message :  查看对正在编译的函数 模板 实例化“bool aiVector3t<float>::operator ==(const aiVector3t<float> &) const”的引用
+  main.cpp
+F:\OpenGL\CPP\OpenGLExcercise01\packages\Assimp.3.0.0\build\native\include\assimp\types.h(150): message :  查看对正在编译的 类 模板 实例化“aiVector3t<float>”的引用
+F:\OpenGL\CPP\OpenGLExcercise01\OpenGLExcercise01\main.cpp(157,11): warning C4244:  “=”: 从“double”转换到“float”，可能丢失数据
+F:\OpenGL\CPP\OpenGLExcercise01\OpenGLExcercise01\main.cpp(158,11): warning C4244:  “=”: 从“double”转换到“float”，可能丢失数据
+F:\OpenGL\CPP\OpenGLExcercise01\OpenGLExcercise01\main.cpp(163,16): warning C4244:  “=”: 从“double”转换到“float”，可能丢失数据
+F:\OpenGL\CPP\OpenGLExcercise01\OpenGLExcercise01\main.cpp(164,16): warning C4244:  “=”: 从“double”转换到“float”，可能丢失数据
+F:\OpenGL\CPP\OpenGLExcercise01\OpenGLExcercise01\main.cpp(166,10): warning C4244:  “=”: 从“double”转换到“float”，可能丢失数据
+  正在生成代码...
+F:\OpenGL\CPP\OpenGLExcercise01\OpenGLExcercise01\main.cpp(167,10): warning C4244:  “=”: 从“double”转换到“float”，可能丢失数据
+LINK : warning LNK4098: 默认库“MSVCRT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
+LINK : warning LNK4098: 默认库“LIBCMT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
+LINK : warning LNK4286: 符号“___glewActiveTexture”(在“glew32s.lib(glew.obj)”中定义)已由“Mesh.obj”导入
+LINK : warning LNK4286: 符号“___glewBindBuffer”(在“glew32s.lib(glew.obj)”中定义)已由“Mesh.obj”导入
+LINK : warning LNK4286: 符号“___glewBufferData”(在“glew32s.lib(glew.obj)”中定义)已由“Mesh.obj”导入
+LINK : warning LNK4286: 符号“___glewGenBuffers”(在“glew32s.lib(glew.obj)”中定义)已由“Mesh.obj”导入
+LINK : warning LNK4286: 符号“___glewEnableVertexAttribArray”(在“glew32s.lib(glew.obj)”中定义)已由“Mesh.obj”导入
+LINK : warning LNK4286: 符号“___glewVertexAttribPointer”(在“glew32s.lib(glew.obj)”中定义)已由“Mesh.obj”导入
+LINK : warning LNK4286: 符号“___glewBindVertexArray”(在“glew32s.lib(glew.obj)”中定义)已由“Mesh.obj”导入
+LINK : warning LNK4286: 符号“___glewGenVertexArrays”(在“glew32s.lib(glew.obj)”中定义)已由“Mesh.obj”导入
+LINK : warning LNK4286: 符号“___glewAttachShader”(在“glew32s.lib(glew.obj)”中定义)已由“Shader.obj”导入
+LINK : warning LNK4286: 符号“___glewCompileShader”(在“glew32s.lib(glew.obj)”中定义)已由“Shader.obj”导入
+LINK : warning LNK4286: 符号“___glewCreateProgram”(在“glew32s.lib(glew.obj)”中定义)已由“Shader.obj”导入
+LINK : warning LNK4286: 符号“___glewCreateShader”(在“glew32s.lib(glew.obj)”中定义)已由“Shader.obj”导入
+LINK : warning LNK4286: 符号“___glewDeleteShader”(在“glew32s.lib(glew.obj)”中定义)已由“Shader.obj”导入
+LINK : warning LNK4286: 符号“___glewGetProgramInfoLog”(在“glew32s.lib(glew.obj)”中定义)已由“Shader.obj”导入
+LINK : warning LNK4286: 符号“___glewGetProgramiv”(在“glew32s.lib(glew.obj)”中定义)已由“Shader.obj”导入
+LINK : warning LNK4286: 符号“___glewGetShaderInfoLog”(在“glew32s.lib(glew.obj)”中定义)已由“Shader.obj”导入
+LINK : warning LNK4286: 符号“___glewGetShaderiv”(在“glew32s.lib(glew.obj)”中定义)已由“Shader.obj”导入
+LINK : warning LNK4286: 符号“___glewGetUniformLocation”(在“glew32s.lib(glew.obj)”中定义)已由“Shader.obj”导入
+LINK : warning LNK4286: 符号“___glewLinkProgram”(在“glew32s.lib(glew.obj)”中定义)已由“Shader.obj”导入
+LINK : warning LNK4286: 符号“___glewShaderSource”(在“glew32s.lib(glew.obj)”中定义)已由“Shader.obj”导入
+LINK : warning LNK4286: 符号“___glewUniform1f”(在“glew32s.lib(glew.obj)”中定义)已由“Shader.obj”导入
+LINK : warning LNK4286: 符号“___glewUniform1i”(在“glew32s.lib(glew.obj)”中定义)已由“Shader.obj”导入
+LINK : warning LNK4286: 符号“___glewUniform3f”(在“glew32s.lib(glew.obj)”中定义)已由“Shader.obj”导入
+LINK : warning LNK4286: 符号“___glewUseProgram”(在“glew32s.lib(glew.obj)”中定义)已由“Shader.obj”导入
+glew32s.lib(glew.obj) : warning LNK4099: 未找到 PDB“”(使用“glew32s.lib(glew.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
   OpenGLExcercise01.vcxproj -> F:\OpenGL\CPP\OpenGLExcercise01\Debug\OpenGLExcercise01.exe
