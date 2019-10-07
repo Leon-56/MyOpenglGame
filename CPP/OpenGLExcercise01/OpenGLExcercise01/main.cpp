@@ -8,6 +8,7 @@
 #include "LightDirectional.h"
 #include "LightPoint.h"
 #include "LightSpot.h"
+#include "Mesh.h"
 
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
@@ -86,24 +87,24 @@ Camera camera(glm::vec3(0, 0, 3.0f), glm::radians(15.0f), glm::radians(180.0f), 
 #pragma endregion
 
 #pragma region Light Declare
-LightDirectional lightD = LightDirectional(glm::vec3(1.0f, 1.0f, -1.0f),
+LightDirectional lightD(glm::vec3(1.0f, 1.0f, -1.0f),
 	glm::vec3(glm::radians(90.0f), glm::radians(0.0f), 0),
 	glm::vec3(1.0f, 1.0f, 1.0f));
 
-LightPoint lightP0 = LightPoint(glm::vec3(1.0f, 0, 0),
+LightPoint lightP0 (glm::vec3(1.0f, 0, 0),
 	glm::vec3(glm::radians(45.0f), glm::radians(45.0f), 0),
 	glm::vec3(1.0f, 0, 0));
-LightPoint lightP1 = LightPoint(glm::vec3(0, 1.0f, 0),
+LightPoint lightP1 (glm::vec3(0, 1.0f, 0),
 	glm::vec3(glm::radians(45.0f), glm::radians(45.0f), 0),
 	glm::vec3(0, 1.0f, 0));
-LightPoint lightP2 = LightPoint(glm::vec3(0, 0, 1.0f),
+LightPoint lightP2 (glm::vec3(0, 0, 1.0f),
 	glm::vec3(glm::radians(45.0f), glm::radians(45.0f), 0),
 	glm::vec3(0, 0, 1.0f));
-LightPoint lightP3 = LightPoint(glm::vec3(1.0f, 1.0f, 1.0f),
+LightPoint lightP3 (glm::vec3(1.0f, 1.0f, 1.0f),
 	glm::vec3(glm::radians(45.0f), glm::radians(45.0f), 0),
 	glm::vec3(1.0f, 1.0f, 1.0f));
 
-LightSpot lightS = LightSpot(glm::vec3(0, 5.0f, 0),
+LightSpot lightS (glm::vec3(0, 5.0f, 0),
 	glm::vec3(glm::radians(90.0f), glm::radians(0.0f), 0),
 	glm::vec3(1.0f, 1.0f, 1.0f));
 #pragma endregion
@@ -238,22 +239,23 @@ int main() {
 	#pragma endregion
 
 	#pragma region Init and Load Models to VAO, VBO
-		unsigned int VAO;
-		glGenVertexArrays(1, &VAO);
-		glBindVertexArray(VAO);
-
-		unsigned int VBO;
-		glGenBuffers(1, &VBO);
-		glBindBuffer(GL_ARRAY_BUFFER, VBO);
-
-		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)0);
-		glEnableVertexAttribArray(0);
-		glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(3 * sizeof(float)));
-		glEnableVertexAttribArray(1);
-		glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(6 * sizeof(float)));
-		glEnableVertexAttribArray(2);
-
-		glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+		Mesh cube(vertices);
+		//unsigned int VAO;
+		//glGenVertexArrays(1, &VAO);
+		//glBindVertexArray(VAO);
+		//
+		//unsigned int VBO;
+		//glGenBuffers(1, &VBO);
+		//glBindBuffer(GL_ARRAY_BUFFER, VBO);
+		//
+		//glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)0);
+		//glEnableVertexAttribArray(0);
+		//glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(3 * sizeof(float)));
+		//glEnableVertexAttribArray(1);
+		//glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(6 * sizeof(float)));
+		//glEnableVertexAttribArray(2);
+		//
+		//glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 	#pragma endregion
 
 	#pragma region Init and Load Textures
@@ -286,7 +288,7 @@ int main() {
 
 		viewMat = camera.GetViewMatrix();
 
-		for (int i = 0; i < 10; i++) {
+		for (int i = 0; i < 1; i++) {
 			// Set Model Matrix
 			modelMat = glm::translate(glm::mat4(1.0f), cubePositions[i]);
 			
@@ -360,10 +362,11 @@ int main() {
 			myMaterial->shader->SetUniform1f("material.shininess", myMaterial->shininess);
 
 			// Set Model
-			glBindVertexArray(VAO);
+			//glBindVertexArray(VAO);
 
 			// Drawcall
-			glDrawArrays(GL_TRIANGLES, 0, 36);
+			//glDrawArrays(GL_TRIANGLES, 0, 36);
+			cube.Draw(myMaterial->shader);
 		}
 
 

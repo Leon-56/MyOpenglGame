@@ -1,8 +1,2 @@
-﻿  main.cpp
-F:\OpenGL\CPP\OpenGLExcercise01\OpenGLExcercise01\main.cpp(154,11): warning C4244:  “=”: 从“double”转换到“float”，可能丢失数据
-F:\OpenGL\CPP\OpenGLExcercise01\OpenGLExcercise01\main.cpp(155,11): warning C4244:  “=”: 从“double”转换到“float”，可能丢失数据
-F:\OpenGL\CPP\OpenGLExcercise01\OpenGLExcercise01\main.cpp(160,16): warning C4244:  “=”: 从“double”转换到“float”，可能丢失数据
-F:\OpenGL\CPP\OpenGLExcercise01\OpenGLExcercise01\main.cpp(161,16): warning C4244:  “=”: 从“double”转换到“float”，可能丢失数据
-F:\OpenGL\CPP\OpenGLExcercise01\OpenGLExcercise01\main.cpp(163,10): warning C4244:  “=”: 从“double”转换到“float”，可能丢失数据
-F:\OpenGL\CPP\OpenGLExcercise01\OpenGLExcercise01\main.cpp(164,10): warning C4244:  “=”: 从“double”转换到“float”，可能丢失数据
+﻿  Mesh.cpp
   OpenGLExcercise01.vcxproj -> F:\OpenGL\CPP\OpenGLExcercise01\Debug\OpenGLExcercise01.exe
