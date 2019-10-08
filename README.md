@@ -4,3 +4,5 @@
 Visual Studio 2019 
 ## 图形库
 glew 
+## 截图  
+![1](https://raw.githubusercontent.com/YuG56/MyOpenglGame/master/IMG_5233.PNG)
